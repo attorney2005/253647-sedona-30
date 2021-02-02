@@ -1,0 +1,98 @@
+  
+/* 
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #242424;
+  --basic-dark: #aba9a7;
+  --basic-neutral: #e5e5e5;
+  --basic-extra-light: #f8f5f2;
+  --basic-white: #ffffff;
+  --special: #663d15
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-black);
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+   */
+
+@font-face {
+font-family: "PT Sans";
+scr: url(../fonts/PTSans.woff2) format("woff2"),
+scr: url(../fonts/PTSans.woff) format("woff"),
+font-weight: 400;
+font-style: normal;
+
+@font-face {
+  font-family: "PT Sans";
+  scr: url(../fonts/PTSans.woff2) format("woff2"),
+  scr: url(../fonts/PTSans.woff) format("woff"),
+  font-weight: 700;
+  font-style: normal;
+
+
+
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-main {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.site-navigation {
+  background: #FFFFFF;
+}
+
+.explanation {
+  background: #FFFFFF;
+}
+
+.attraction-with-image-section__text-container {
+  background: #81B3D2;
+}
+
+.attraction-second-image-section__text-container {
+  background: #81B3D2;
+}
+
+.feature-section {
+  background: #FFFFFF;
+}
+
+.footer-main-social__button {
+  display:block;
+  width: 46px;
+  height: 48px;
+  background: #81B3D2;
+}
+
+.attraction-section {
+  background: #EEEEEE;
+}
+
+.search-form-section {
+  background: #FFFFFF;
+}
+
+.data-search {
+  background: #FFFFFF;
+}
+
+.booking {
+  background: #FFFFFF;
+}

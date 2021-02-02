@@ -4,16 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Седона</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body>
+<body class="page-body">
 
-  <header>
-    <nav>
-      <a>
-        <img src="#" width="368" height="153" alt="Логотип Седона»">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a main-header-logo>
+        <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона»">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="blank.html">Информация</a></li>
         <li><a href="blank.html">Фото и видео</a></li>
         <li><a href="blank.html">Карта штата</a></li>
@@ -22,123 +30,132 @@
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <h1>Седона</h1>
     <section>
-      <figure>
-        <img src="#" width="1200" height="509" alt="Виды Седоны">
-      </figure>
+      <img src="img/background photo.jpg" width="1200" height="509" alt="Виды Седоны">
     </section>
 
-    <section>
-      <h2>Седона-небольшой городок в Аризоне,<br>заслуживающий большего!</h2>    
-      <p>рассмотрим 5 причин, почему Седона круче, чем Гранд-коньон</p>
+    <section class="explanation">
+      <h2 class="explanation__title">Седона-небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
+      <p class="explanation__description"> рассмотрим 5 причин, почему Седона круче, чем Гранд-коньон</p>
     </section>
 
-    <div>
-      <img src="#" width="800" height="256" alt="Виды Седоны">
-      <p>настоящий городок</p>
-      <p>— №1 —</p>
-      <p>седона-не аттракцион для тупистов, там течет своя жизнь</p>
+    <div class="attraction-with-image-section">
+      <img class="attraction-with-image-section__image" src="img/image (1).jpg" width="800" height="256"
+        alt="Виды Седоны">
+      <div class="attraction-with-image-section__text-container">
+        <p class="attraction-with-image-section__title">настоящий городок</p>
+        <p class="attraction-with-image-section__subtitle">— №1 —</p>
+        <p class="attraction-with-image-section__description">седона-не аттракцион для тупистов, там течет своя жизнь
+        </p>
+      </div>
     </div>
 
-    <section>
-      <ul>
-        <li> 
-          <img src="">
-          <h3>жилье</h3>
-          <p>Рекомендуем пожить в настоящем Мотеле, все как в кино!</p>
+    <section class="feature-section">
+      <ul class="feature-section__feature-list">
+        <li class="feature-section__feature">
+          <img class="feature-section__feature-image" src="img/icon-1.svg">
+          <h3 class="feature-section__feature-title">жилье</h3>
+          <p class="feature-section__feature-description">Рекомендуем пожить в настоящем Мотеле, все как в кино!</p>
         </li>
-        <li>
-          <img src="">
-          <h3>еда</h3>
-          <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        <li class="feature-section__feature">
+          <img class="feature-section__feature-image" src="img/icon-3.svg">
+          <h3 class="feature-section__feature-title">еда</h3>
+          <p class="feature-section__feature-description">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
-        <li>
-          <img src="">
-          <h3>сувениры</h3>
-          <p>не только китайского, но и местного производства!</p>
+        <li class="feature-section__feature">
+          <img class="feature-section__feature-image" src="img/icon-2.svg">
+          <h3 class="feature-section__feature-title">сувениры</h3>
+          <p class="feature-section__feature-description">не только китайского, но и местного производства!</p>
         </li>
       </ul>
     </section>
 
-    <div>
-      <img src="#" width="800" height="256" alt="Виды каньонов">
-      <p>Там есть Мост дьявола</p>
-      <p>— №2 —</p>
-      <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+    <div class="attraction-second-image-section">
+      <img class="attraction-second-image-section__image" src="img/image.jpg" width="800" height="256"
+        alt="Виды каньонов">
+      <div class="attraction-with-image-section__text-container">
+        <p class="attraction-with-image-section__title">Там есть Мост дьявола</p>
+        <p class="attraction-with-image-section__subtitle">— №2 —</p>
+        <p class="attraction-with-image-section__description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+      </div>
     </div>
 
-    <section>
-      <ul>
-        <li>
-          <h3> небольшая площадь</h3>
-          <p>— №3 —</p>
-          <p>все достопримечательности находятся близко</p>
+    <section class="attraction-section">
+      <ul class="attraction-section__list">
+        <li class="attraction-section__item">
+          <h3c class="attraction-section__item-title"> небольшая площадь</h3>
+            <p class="attraction-section__item-subtitle">— №3 —</p>
+            <p class="attraction-section__item-text">все достопримечательности находятся близко</p>
         </li>
         <li>
-          <h3> красивая дорога</h3>
-          <p>— №4 —</p>
-          <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+          <h3 class="attraction-section__item-title"> красивая дорога</h3>
+          <p class="attraction-section__item-subtitle">— №4 —</p>
+          <p class="attraction-section__item-text">ехать в седону из лас-вегаса совсем не скучно!</p>
         </li>
         <li>
-          <h3>мало туристов</h3>
-          <p>— №5 —</p>
-          <p>большинство едет в гранд-коньон и толпится там!</p>
+          <h3 class="attraction-section__item-title">мало туристов</h3>
+          <p class="attraction-section__item-subtitle">— №5 —</p>
+          <p class="attraction-section__item-text">большинство едет в гранд-коньон и толпится там!</p>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2>заинтересовались?</h2>
-      <h3>укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в седоне</h3>
-    </section>
+    <section class="search-form-section">
+      <div class="search-form-section__header-container">
+        <h2 class="search-form-section__title">заинтересовались?</h2>
+        <p class="search-form-section__subtitle">
+          укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в седоне
+        </p>
+      </div>
 
-    <section>
-      <h1>поиск гостиницы в седоне</h1>
-      <!--- здесь будет форма записи--->
-      <button type="submit">найти</button>
-    </section>
+      <form class="search-form-section__form">
+        <button type="button">поиск гостиницы в седоне</p>
 
-    <section>
-      <!-- карта-->
+          <!--- здесь будет форма записи--->
+          <button type="submit">найти</button>
+      </form>
+      <img class="search-form-section__map" src="img/map.jpg">
     </section>
   </main>
 
-  <footer>
-    <section>
-      <h3>#visitsedona<br>
-        тел: +(495) 666-01-66</h3>
-    </section>
+  <footer class="footer-main">
+    <div class="footer-main__contacts">
+      <a class="footer-main-button__search" href="#">#visitsedona</a><br>
+      <a class="footer-main-button__phone" href="#">тел: +(495) 666-01-66</a>
+    </div>
 
-    <section>
-      <h3>соцсети</h3>
+    <div class="footer-main-social">
+      <h3 class="footer-main-social__title">соцсети</h3>
       <!--заголовок потом спрячем-->
-      <ul>
-        <li>
-          <a href="#">Твиттер</a>
+      <ul class="footer-main-social__list">
+        <li class="footer-main-social__item">
+          <a class="footer-main-social__button" href="#">
+            <img src="img/twitter.svg">
+          </a>
         </li>
-        <li>
-          <a href="#">Фейсбук</a>
+        <li class="footer-main-social__item">
+          <a class="footer-main-social__button" href="#">
+            <img src="img/fb-icon.svg">
+          </a>
         </li>
-        <li>
-          <a href="#">Инстаграм</a>
+        <li class="footer-main-social__item">
+          <a class="footer-main-social__button" href="#">
+            <img src="img/youtube.svg">
+          </a>
         </li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div class="footer-main-logo">
       <!--иконка HTML academy-->
-      <p>
-        <img src="#">
-
-        webcite by:
-        <a href="https://htmlacademy.ru">HTML Academy</a>
-      </p>
-
-
-    </section>
+      <img src="img/websiteby.svg"></img>
+      
+        <img src="img/logo-htmlacademy.svg"></img>
+      
+    </div>
 
   </footer>
 </body>

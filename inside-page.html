@@ -4,16 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Седона</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
-<body>
+<body class="page-body">
 
-    <header>
-        <nav>
-            <a href="index.html">
-                <img src="#" width="368" height="153" alt="Логотип Седона»">
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a main-header-logo>
+                <img src="img/logo.svg" alt="Логотип Седона»">
             </a>
-            <ul>
+            <ul class="site-navigation">
                 <li><a href="blank.html">Информация</a></li>
                 <li><a href="blank.html">Фото и видео</a></li>
                 <li><a href="blank.html">Карта штата</a></li>
@@ -22,51 +31,55 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container">
 
-        <section>
-            <h2>инфраструктура:</h2>
-            <div>
-                <div>
-                    <input type="checkbox" name="pool" id="pool" checked>
-                    <label for="pool">бассейн</label>
+        <form class="choose-form-section" background="img/background.jpg" alt="Фон-Горы">
+            <!---разобраться-->
+            <fieldset class="choose-form">
+                <legend class="choose-form__title">инфраструктура:</legend>
+                <div class="choose-form__check">
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="pool" id="pool" checked>
+                        <label for="pool">бассейн</label>
+                    </div>
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="parking" id="parking">
+                        <label for="parking">парковка</label>
+                    </div>
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="wi-fi" id="wi-fi">
+                        <label for="wi-fi">wi-fi</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="parking" id="parking">
-                    <label for="parking">парковка</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="wi-fi" id="wi-fi">
-                    <label for="wi-fi">wi-fi</label>
-                </div>
-            </div>
 
-            <div>
-                <h2>тип жилья:</h2>
-                <div>
-                    <input type="checkbox" name="hotel" id="hotel" checked>
-                    <label for="hotel">гостиница</label>
+                <legend class="choose-form__title">тип жилья:</legend>
+                <div class="choose-form__check">
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="hotel" id="hotel" checked>
+                        <label for="hotel">гостиница</label>
+                    </div>
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="motel" id="motel" checked>
+                        <label for="motel">мотель</label>
+                    </div>
+                    <div class="choose-form__checkbox">
+                        <input type="checkbox" name="apartments" id="apartments" checked>
+                        <label for="apartments">апартаменты</label>
+                    </div>
                 </div>
-                <div>
-                    <input type="checkbox" name="motel" id="motel" checked>
-                    <label for="motel">мотель</label>
-                </div>
-                <div>
-                    <input type="checkbox" name="apartments" id="apartments" checked>
-                    <label for="apartments">апартаменты</label>
-                </div>
-            </div>
 
-            <div>
-                <h2>стоимость в сутки(р):</h2>
-                <!--здесь будет бегунок-->
-                <button type="submit">показать</button>
-            </div>
-        </section>
 
-        <section>
-            <h2>найдено:3</h2>
-            <h3>сортировка</h3>
+                <legend class="choose-form__title">стоимость в сутки(р):</legend>
+                <div>
+                    <!--здесь будет бегунок-->
+                    <button type="submit">показать</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <section class="data-search">
+            <p>найдено:3</p>
+            <p>сортировка</p>
             <ul>
                 <li>по цене</li>
                 <li>по типу</li>
@@ -76,102 +89,100 @@
             &#9660;
         </section>
 
-        <section>
+        <section class="booking">
+            <img src="img/Layer 21.jpg" widht="135" height="90" alt="гостиница на фоне багрового леса">
             <div>
-                <img src="#">
-            </div>
-            <div>
-                <container>
+                <div>
                     <h3>amara resort $ spa</h3>
                     <p>гостиница</p>
                     <p>от 4000 р.</p>
-                    <button>подробнее</button>
-                    <button>забронировать</button>
-                </container>
-                <container>
-                    &#9733;
-                    &#9733;
-                    &#9733;
-                    &#9733;
-                    <button>рейтинг: 8.5</button>
-                </container>
+                    <a href="#">подробнее</a>
+                    <a href="#">забронировать</a>
+                </div>
+                <div>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>рейтинг: 8.5</p>
+                </div>
             </div>
         </section>
 
         <section>
             <div>
-                <img src="#">
+                <img src="img/Layer 89 copy.jpg" widht="135" height="90" alt="мотель у дороги">
             </div>
             <div>
-                <container>
+                <div>
                     <h3>resert quail inn</h3>
                     <p>мотель</p>
                     <p>от 3000 р.</p>
-                    <button>подробнее</button>
-                    <button>забронировать</button>
-                </container>
-                <container>
-                    &#9733;
-                    &#9733;
-                    &#9733;
-                    <button>рейтинг: 8.9</button>
-                </container>
+                    <a href="#">подробнее</a>
+                    <a href="#">забронировать</a>
+                </div>
+                <div>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>рейтинг: 8.9</p>
+                </div>
             </div>
         </section>
 
         <section>
             <div>
-                <img src="#">
+                <img src="img/Rectangle.jpg" widht="135" height="90" alt="апартаменты на опушке леса">
             </div>
             <div>
-                <container>
+                <div>
                     <h3>villas at poco diablo</h3>
                     <p>апартаменты</p>
                     <p>от 2000 р.</p>
-                    <button>подробнее</button>
-                    <button>забронировать</button>
-                </container>
-                <container>
-                    &#9733;
-                    &#9733;
-                    <button>рейтинг: 9.2</button>
-                </container>
+                    <a href="#">подробнее</a>
+                    <a href="#">забронировать</a>
+                </div>
+                <div>
+                    <p>&#9733;</p>
+                    <p>&#9733;</p>
+                    <p>рейтинг: 9.2</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="footer-main">
+        <div class="footer-main__contacts">
+            <a class="footer-main-button__search" href="#">#visitsedona</a><br>
+            <a class="footer-main-button__phone" href="#">тел: +(495) 666-01-66</a>
+        </div>
 
-        <section>
-            <h3>#visitsedona<br>
-                тел: +(495) 666-01-66</h3>
-        </section>
-
-        <section>
-            <h3>соцсети</h3>
+        <div class="footer-main-social">
+            <h3 class="footer-main-social__title">соцсети</h3>
             <!--заголовок потом спрячем-->
-            <ul>
-                <li>
-                    <a href="#">Твиттер</a>
+            <ul class="footer-main-social__list">
+                <li class="footer-main-social__item">
+                    <a class="footer-main-social__buttom" href="img/twitter.svg">Твиттер</a>
                 </li>
-                <li>
-                    <a href="#">Фейсбук</a>
+                <li class="footer-main-social__item">
+                    <a class="footer-main-social__buttom" href="img/fb-icon.svg">Фейсбук</a>
                 </li>
-                <li>
-                    <a href="#">Инстаграм</a>
+                <li class="footer-main-social__item">
+                    <a class="footer-main-social__buttom" href="img/youtube.svg">Инстаграм</a>
                 </li>
             </ul>
-        </section>
+        </div>
 
-        <section>
+        <div class="footer-main-logo">
             <!--иконка HTML academy-->
-            <p>
-                <img src="#">
+            <img src="img/websiteby.svg"></img>
 
-                webcite by:
-                <a href="https://htmlacademy.ru">HTML Academy</a>
-            </p>
-        </section>
+            <img src="img/logo-htmlacademy.svg"></img>
+
+        </div>
 
     </footer>
+</body>
+
+</html>
