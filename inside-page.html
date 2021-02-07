@@ -6,8 +6,8 @@
     <title>Седона</title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic;display=swap">
-    <link href="normalize.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/180.png">
@@ -19,23 +19,27 @@
 
     <header class="main-header">
         <nav class="main-navigation">
-            <a main-header-logo>
-                <img src="img/logo.svg" alt="Логотип Седона»">
-            </a>
-            <ul class="site-navigation">
-                <li><a href="blank.html">Информация</a></li>
-                <li><a href="blank.html">Фото и видео</a></li>
-                <li><a href="blank.html">Карта штата</a></li>
-                <li><a href="blank.html">Гостиницы</a></li>
-            </ul>
+            <div class="main-navigation-wrapper">
+                <div class="site-navigation">
+                    <a href="blank.html">Информация</a>
+                    <a href="blank.html">Фото и видео</a>
+                </div>
+                <div class="main-header-logo">
+                    <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона»">
+                </div>
+                <div class="site-navigation">
+                    <a href="blank.html">Карта штата</a>
+                    <a href="blank.html">Гостиницы</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="container">
 
-        <form class="choose-form-section" background="img/background.jpg" alt="Фон-Горы">
+        <form class="choose-form-section">
             <!---разобраться-->
-            <fieldset class="choose-form">
+            <fieldset>
                 <legend class="choose-form__title">инфраструктура:</legend>
                 <div class="choose-form__check">
                     <div class="choose-form__checkbox">
@@ -51,7 +55,8 @@
                         <label for="wi-fi">wi-fi</label>
                     </div>
                 </div>
-
+            </fieldset>
+            <fieldset>
                 <legend class="choose-form__title">тип жилья:</legend>
                 <div class="choose-form__check">
                     <div class="choose-form__checkbox">
@@ -67,8 +72,8 @@
                         <label for="apartments">апартаменты</label>
                     </div>
                 </div>
-
-
+            </fieldset>
+            <fieldset>
                 <legend class="choose-form__title">стоимость в сутки(р):</legend>
                 <div>
                     <!--здесь будет бегунок-->
@@ -85,103 +90,122 @@
                 <li>по типу</li>
                 <li>по рейтингу</li>
             </ul>
-            &#9650;
-            &#9660;
+            <p>&#9650; &#9660;</p>
         </section>
 
         <section class="booking">
-            <img src="img/Layer 21.jpg" widht="135" height="90" alt="гостиница на фоне багрового леса">
-            <div>
-                <div>
-                    <h3>amara resort $ spa</h3>
-                    <p>гостиница</p>
-                    <p>от 4000 р.</p>
-                    <a href="#">подробнее</a>
-                    <a href="#">забронировать</a>
+            <img src="img/autumn.jpg" widht="135" height="90" alt="гостиница на фоне багрового леса">
+            <div class="booking__description">
+                <h3 class="booking__title">amara resort $ spa</h3>
+                <div class="boking__details">
+                    <div class="booking__details-column">
+                        <p class="booking__name">гостиница</p>
+                        <a class="booking-__price" href="#">подробнее</a>
+                    </div>
+                    <div class="booking__details-column">
+                        <p>от 4000 р.</p>
+                        <a href="#">забронировать</a>
+                    </div>
                 </div>
-                <div>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>рейтинг: 8.5</p>
-                </div>
+            </div>
+            <div class="booking__rating-container">
+                <p class="booking__rating-stars">
+                    &#9733;
+                    &#9733;
+                    &#9733;
+                    &#9733;
+                </p>
+                <p class="booking__rating-button">рейтинг: 8.5</p>
             </div>
         </section>
 
-        <section>
-            <div>
-                <img src="img/Layer 89 copy.jpg" widht="135" height="90" alt="мотель у дороги">
+        <section class="booking">
+            <img src="img/motelroad.jpg" widht="135" height="90" alt="мотель у дороги">
+            <div class="booking__description">
+                <h3 class="booking__title">resert quail inn</h3>
+                <div class="boking__details">
+                    <div class="booking__details-column">
+                        <p class="booking__name">мотель</p>
+                        <a class="booking-__price" href="#">подробнее</a>
+                    </div>
+                    <div class="booking__details-column">
+                        <p>от 3000 р.</p>
+                        <a href="#">забронировать</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <div>
-                    <h3>resert quail inn</h3>
-                    <p>мотель</p>
-                    <p>от 3000 р.</p>
-                    <a href="#">подробнее</a>
-                    <a href="#">забронировать</a>
-                </div>
-                <div>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>рейтинг: 8.9</p>
-                </div>
+            <div class="booking__rating-container">
+                <p class="booking__rating-stars">
+                    &#9733;
+                    &#9733;
+                    &#9733;
+                </p>
+                <p class="booking__rating-button">рейтинг: 8.9</p>
             </div>
         </section>
 
-        <section>
-            <div>
-                <img src="img/Rectangle.jpg" widht="135" height="90" alt="апартаменты на опушке леса">
+        <section class="booking">
+            <img src="img/housefield.jpg" widht="135" height="90" alt="апартаменты на опушке леса">
+            <div class="booking__description">
+                <h3 class="booking__title">villas at poco diablo</h3>
+                <div class="boking__details">
+                    <div class="booking__details-column">
+                        <p>апартаменты</p>
+                        <a href="#">подробнее</a>
+                    </div>
+                    <div>
+                        <p>от 2000 р.</p>
+                        <a href="#">забронировать</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <div>
-                    <h3>villas at poco diablo</h3>
-                    <p>апартаменты</p>
-                    <p>от 2000 р.</p>
-                    <a href="#">подробнее</a>
-                    <a href="#">забронировать</a>
-                </div>
-                <div>
-                    <p>&#9733;</p>
-                    <p>&#9733;</p>
-                    <p>рейтинг: 9.2</p>
-                </div>
+            <div class="booking__rating-container">
+                <p class="booking__rating-stars">
+                    &#9733;
+                    &#9733;
+                </p>
+                <p class="booking__rating-button">рейтинг: 9.2</p>
             </div>
         </section>
 
     </main>
 
     <footer class="footer-main">
-        <div class="footer-main__contacts">
-            <a class="footer-main-button__search" href="#">#visitsedona</a><br>
-            <a class="footer-main-button__phone" href="#">тел: +(495) 666-01-66</a>
+        <div class="footer-container">
+            <div class="footer-main__contacts">
+                <a class="footer-main-button__search" href="#">#visitsedona</a><br>
+                <a class="footer-main-button__phone" href="#">тел: +(495) 666-01-66</a>
+            </div>
+
+            <div class="footer-main-social">
+                <!--заголовок потом спрячем-->
+                <ul class="footer-main-social__list">
+                    <li class="footer-main-social__item">
+                        <a class="footer-main-social__button" href="#">
+                            <img src="img/twitter.svg">
+                        </a>
+                    </li>
+                    <li class="footer-main-social__item">
+                        <a class="footer-main-social__button" href="#">
+                            <img src="img/fb-icon.svg">
+                        </a>
+                    </li>
+                    <li class="footer-main-social__item">
+                        <a class="footer-main-social__button" href="#">
+                            <img src="img/youtube.svg">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-main-logo">
+                <!--иконка HTML academy-->
+                <img src="img/websiteby.svg"></img>
+
+                <img src="img/logo-htmlacademy.svg"></img>
+
+            </div>
         </div>
-
-        <div class="footer-main-social">
-            <h3 class="footer-main-social__title">соцсети</h3>
-            <!--заголовок потом спрячем-->
-            <ul class="footer-main-social__list">
-                <li class="footer-main-social__item">
-                    <a class="footer-main-social__buttom" href="img/twitter.svg">Твиттер</a>
-                </li>
-                <li class="footer-main-social__item">
-                    <a class="footer-main-social__buttom" href="img/fb-icon.svg">Фейсбук</a>
-                </li>
-                <li class="footer-main-social__item">
-                    <a class="footer-main-social__buttom" href="img/youtube.svg">Инстаграм</a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="footer-main-logo">
-            <!--иконка HTML academy-->
-            <img src="img/websiteby.svg"></img>
-
-            <img src="img/logo-htmlacademy.svg"></img>
-
-        </div>
-
     </footer>
 </body>
 
