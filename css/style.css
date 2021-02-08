@@ -6,6 +6,8 @@
   --basic-dark: #81B3D2;
   --footer-color: rgba(255, 255, 255, 0.9);
   --default-font-family: "PT Sans", Arial, sans-serif;
+  --default-black: #000000;
+  --default-hover: #81B3D2;
 } 
 
 body {
@@ -35,10 +37,6 @@ body {
 .img {
   max-width: 100%;
   height: auto;
-}
-
-.site-navigation {
-  background: var(--basic-white);
 }
 
 .explanation {
@@ -72,43 +70,45 @@ body {
   min-height: 100%;
 }
 
-.main-header {
-  margin: 0 auto;
-  outline-offset: -5px;
+/* header */
+
+.header {
+  background-color: var(--basic-white);
 }
 
-.footer-main {
-  outline-offset: -5px;
-}
-
-.main-header-logo {
-  justify-self: center;
-  outline-offset: -5px;
-}
-
-.main-navigation {
-  display: grid;
-  font-size: 14px;
-  line-height: 26px;
-  color: #000000;
-  background-color: var;
-}
-
-.main-navigation-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+.header__content-container {
+  display: flex;
+  justify-content: space-between;
   width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
-  outline-offset: -5px; 
 }
 
-.site-navigation {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0 auto;
-  padding: 0;
-  list-style:none;
+.header__logo {
+  margin: 0 54px;
+}
+
+.header__nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header__nav-item {
+  display: block;
+  font-family: var(--default-font-family);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--default-black);
+}
+
+.header__nav-item:hover {
+  color: var(--default-hover);
 }
 
 .attraction-with-image-section {
@@ -124,6 +124,12 @@ body {
   padding: 0 10px;
   display: grid;
   grid-template-rows: auto 1fr auto 1.5fr auto 1fr auto;
+}
+
+.container__label {
+  position: absolute;
+  padding-left: 372px;
+  padding-top: 77px;
 }
 
 .explanation__title {
@@ -170,6 +176,8 @@ body {
   padding: 0 10px;
   list-style:none;
 }
+
+/* footer */
 
 .footer-main{
   background-color: var(--footer-color);
