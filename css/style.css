@@ -165,9 +165,16 @@ body {
 
 .container__label {
   position: absolute;
-  padding-left: 372px;
-  padding-top: 77px;
+  right: 372px;
+  top: 132px;
+  left: calc(50% - 228px);
 }
+
+.container__image {
+  background-image: url(../img/backgroundphoto.jpg);
+  width: 1180px; 
+  height: 509px; 
+  }
 
 .explanation__title {
   /* width: 470px;
@@ -331,26 +338,123 @@ body {
   margin: 0 auto;
   padding: 0 10px;
 }
+.footer-main-button__search {
+font-size: 21px;
+line-height: 26px;
+}
+
+.footer-main-button__phone {
+font-size: 21px;
+line-height: 26px;
+}
 
 .footer-main-social__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 141px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
   list-style:none;
 }
 
 .footer-main-social__button {
-  display:block;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
-  background:var(--basic-dark);
+  background-color:var(--basic-dark);
+}
+
+.footer-main-social__button:hover {
+background-color: #669EC0;
+}
+
+.footer-main-social__button:hover path {
+  background-color: #669EC0;
+  }
+
+.footer-main-logo {
+display: flex;
+align-items: center;
+}
+
+.footer-main-logo__text {
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.footer-logo:hover path {
+fill: var(--default-hover);
 }
 
 .choose-form-section{
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
-  background-image: url(/img/background.jpg);
+  background-image: url(../img/background.jpg);
+}
+
+
+/* бегунок */
+
+.choose-form__filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: 1;
+}
+
+.choose-form__range-filter {
+
+}
+
+.choose-form__range-controls {
+  width: 316px;
+  margin-left: 50px;
+}
+
+.choose-form__range-controls .scale {
+  width: 316px; 
+  height: 2px;
+  margin-right: 73px;
+  background-color: gray;
+}
+
+.choose-form__price-controls {
+display: flex;
+margin-bottom: 20px;
+}
+
+.choose-form__range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background-color: var(--basic-white);
+}
+
+.choose-form__range-controls .toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.choose-form__range-controls .toggle-min {
+  top: 108px;
+  left: 1000px;
+}
+
+.choose-form__range-controls .toggle-max {
+  top: 108px;
+  left: 1210px;
 }
 
 .data-search {
