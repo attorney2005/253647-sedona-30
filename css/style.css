@@ -393,6 +393,7 @@ fill: var(--default-hover);
 .choose-form-section{
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
+  height: 217px;
   background-image: url(../img/background.jpg);
 }
 
@@ -400,10 +401,11 @@ fill: var(--default-hover);
 /* бегунок */
 
 .choose-form__filter-item {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 27px 73px 32px 73px;
   border: none;
-  opacity: 1;
 }
 
 .choose-form__range-filter {
@@ -411,31 +413,51 @@ fill: var(--default-hover);
 }
 
 .choose-form__range-controls {
+  position: relative;
   width: 316px;
-  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .choose-form__range-controls .scale {
+  position: relative;
   width: 316px; 
   height: 2px;
-  margin-right: 73px;
   background-color: gray;
 }
 
 .choose-form__price-controls {
-display: flex;
-margin-bottom: 20px;
+  display: flex;
+  width: 317px;
+}
+
+.choose-form__min-price {
+  width: 158px;
+}
+.choose-form__max-price {
+  width: 158px;
+}
+
+.choose-form__min-price-input {
+  width: 158px;
+  padding: 0;
+}
+
+.choose-form__max-price-input{
+  width: 158px;
+  padding: 0;
 }
 
 .choose-form__range-controls .bar {
-  width: 70%;
+  position: absolute;
+  left: 22px;
+  width: 150px;
   height: 2px;
   background-color: var(--basic-white);
 }
 
 .choose-form__range-controls .toggle {
   position: absolute;
-  top: 0;
+  top: -8px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -448,13 +470,30 @@ margin-bottom: 20px;
 }
 
 .choose-form__range-controls .toggle-min {
-  top: 108px;
-  left: 1000px;
+  left: 18px;
 }
 
 .choose-form__range-controls .toggle-max {
-  top: 108px;
-  left: 1210px;
+  left: 160px;
+}
+
+.choose-form__button {
+  display: block;
+  position: relative;
+  width: 137px;
+  height: 36px;
+  margin: 33px auto 0 auto;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px; 
+  padding: 0;
+}
+
+.choose-form__button-text {
+  width: 66px;
+  height: 21px;
+  margin: 7px 24px 8px 24px;
+  text-transform: uppercase;
 }
 
 .data-search {

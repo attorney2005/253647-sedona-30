@@ -68,17 +68,17 @@
                     </div>
                 </fieldset>
 
-                <!-- карусель -->
+                <!-- бегунок -->
 
                 <fieldset class="choose-form__filter-item">
-                    <legend class="choose-form__title">стоимость в сутки(р):</legend>
                     <div class="choose-form__range-filter">
+                        <legend class="choose-form__title">стоимость в сутки(р):</legend>
                         <div class="choose-form__price-controls">
                             <label class="choose-form__min-price">
-                                от <input type="number" name="min-price" value="0">
+                                от <input class="choose-form__min-price-input" type="number" name="min-price" value="0">
                             </label>
                             <label class="choose-form__max-price">
-                                до <input type="number" name="max-price" value="3000">
+                                до <input class="choose-form__max-price-input" type="number" name="max-price" value="3000">
                             </label>
                         </div>
                         <div class="choose-form__range-controls">
@@ -88,9 +88,7 @@
                             <div class="toggle toggle-min"></div>
                             <div class="toggle toggle-max"></div>
                         </div>
-                    </div>
-                    <div>
-                        <button type="submit">показать</button>
+                        <button class="choose-form__button" type="submit"><span class="choose-form__button-text">показать</span></button>
                     </div>
                 </fieldset>
             </form>
