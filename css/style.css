@@ -13,6 +13,7 @@
   --default-hover: #81B3D2;
   --default-brown: #766357;
   --default-dark-grey:  #ababab;
+  --default-for-tringle: #CACACA;
 }
 
 body {
@@ -89,6 +90,15 @@ body {
 .data-search {
   background: var(--basic-white);
 }
+
+.data-search p:first-child {
+ font-size: 21px;
+}
+
+.data-search p:nth-child(2) {
+  font-size: 12px;
+ }
+
 .page-body{
   min-height: 100%;
   background-color: var(--defolt-smoke);
@@ -350,14 +360,21 @@ body {
   color: var(--default-black);
 }
 
+.footer-main__contacts {
+  text-align: center;
+}
+
 .footer-main-social__list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   width: 141px;
   margin: 0 auto;
   padding: 0;
   list-style:none;
+}
+
+.footer-main-social__item {
+  margin-left: 6px;
 }
 
 .footer-main-social__button {
@@ -379,6 +396,7 @@ body {
 
 .footer-main-logo {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -576,9 +594,19 @@ body {
   list-style:none;
 } 
 
+.data-search_triangle {
+  margin-left: auto;
+}
+
+.data-search_triangle a:nth-child(2) {
+  margin-right: 73px;
+}
+
 .data-search_item {
   text-decoration: none;
   color: var(--default-black);
+  font-size: 12px;
+  color: var(--default-for-tringle)
 }
 
 .booking{
@@ -593,10 +621,12 @@ body {
 
 .booking__title {
   margin: 0;
+  font-size: 21px;
 }
 
 .booking__rating-container {
   margin-left: auto;
+  margin-right: 72px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -607,28 +637,32 @@ body {
   margin-left: 29px;
 }
 
-.booking__details-column:not(:first-of-type) {
-  margin-left: 6px;
-}
-
 .booking__rating-container {
   position: relative;
 }
 
 .booking__rating-stars {
   margin: 0;
+  color: var(--basic-dark);
 }
 
 .booking__button-left {
+  padding: 3px 16px 3px 17px;
+  text-transform: uppercase;
+  font-weight: bold;
   background-color: var(--basic-dark);
   color: var(--basic-white);
-  text-transform: uppercase;
+  border: none;
 }
 
 .booking__button-right {
+  margin-left: 6px;
+  padding: 3px 17px 3px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
   background-color: var(--default-brown);
   color: var(--basic-white);
-  text-transform: uppercase;
+  border: none;
 }
 
 .booking__rating-button {
