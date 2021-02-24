@@ -14,6 +14,15 @@
   --default-brown: #766357;
   --default-dark-grey:  #ababab;
   --default-for-tringle: #CACACA;
+  --fefault-for-button: #666666;
+  --default-for-booking__name: #333333;
+  --default-for-border: #E5E5E5;
+  --default-active:  #5496BD;
+  --default-right-button-hover: #604E43;
+  --default-right-button-active: #503E33;
+  --default-logo-active: #231F20;
+  --default-brown-hover: #604E43;
+  --default-brown-active:#503E33;
 }
 
 body {
@@ -183,7 +192,18 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+.attraction-with-image-section__title {
+  font-weight: 700;
+  font-size: 21px;
+}
 
+.attraction-with-image-section__text-container {
+  text-align: center;
+}
+
+.attraction-section__list {
+text-align: center;
+}
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto 1.5fr auto 1fr auto;
@@ -193,6 +213,12 @@ body {
   position: absolute;
   top: 132px;
   left: calc(50% - 228px);
+}
+
+.container__wings {
+  position: absolute;
+  top: 505px;
+  left: calc(50% - px);
 }
 
 .container__image {
@@ -220,6 +246,8 @@ body {
 .feature-section__feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  text-align: center;
   list-style:none;
 }
 
@@ -232,6 +260,7 @@ body {
 .attraction-section__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
   margin: 0 auto;
   list-style:none;
 }
@@ -270,6 +299,14 @@ body {
   border: none;
   text-transform: uppercase;
 }
+
+.search-form-section__open-button:hover {
+background-color: var(--default-brown-hover);
+}
+
+.search-form-section__open-button:active {
+  background-color: var(--default-brown-active);
+  }
 
 .search-form-section__form {
   box-sizing: border-box;
@@ -348,14 +385,14 @@ body {
 .footer-main-button__search {
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   color: var(--default-black);
 }
 .footer-main-button__phone {
   font-size: 21px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
   color: var(--default-black);
 }
@@ -377,6 +414,7 @@ body {
   margin-left: 6px;
 }
 
+
 .footer-main-social__button {
   display:flex;
   align-items: center;
@@ -386,13 +424,23 @@ body {
   background-color:var(--basic-dark);
 }
 
+.footer-main-social__button:active {
+  background-color: var(--dark-blue);
+}
+
 .footer-main-social__button:hover {
   background-color: var(--dark-blue);
 }
 
 .footer-main-social__button:hover path {
-  background-color: var(--dark-blue);
-  }
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.footer-main-social__button:active path {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
 
 .footer-main-logo {
   display: flex;
@@ -408,6 +456,10 @@ body {
 
 .footer-logo:hover path {
   fill: var(--default-hover);
+}
+
+.footer-logo:active path {
+  fill: var(--default-logo-active);
 }
 
 .choose-form-section{
@@ -492,7 +544,8 @@ body {
 }
 
 .choose-form__range-filter {
-
+  padding: 0;
+  border: none;
 }
 
 .choose-form__range-controls {
@@ -509,8 +562,22 @@ body {
 }
 
 .choose-form__price-controls {
+  margin-top: 10px;
+  position: relative;
   border: 2px solid var(--basic-white);
   display: flex;
+}
+
+.choose-form__price-controls::before {
+  content: "";
+  position: absolute;
+  left: 150px;
+  right: 0;
+  top: 0px;
+  width: 2px;
+  height: 22px;
+  background-color:var(--basic-white);
+
 }
 
 .choose-form__price-blocks {
@@ -518,9 +585,11 @@ body {
 }
 
 .choose-form__min-price {
+  margin-left: 64px;
   color:var(--basic-white);
 }
 .choose-form__max-price {
+  margin-left: 72px;
   color:var(--basic-white);
 }
 
@@ -529,6 +598,7 @@ body {
   background: transparent;
   border: none;
   border: 1px solid red;
+  width: 47px;
 }
 
 .choose-form__max-price-input{
@@ -536,6 +606,7 @@ body {
   background: transparent;
   border: none;
   border: 1px solid red;
+  width: 47px;
 }
 
 .choose-form__range-controls .bar {
@@ -581,21 +652,39 @@ body {
   color: var(--basic-white);
 }
 
+.choose-form__button:hover {
+  background-color: var(--basic-white);
+  color: var(--default-black);
+}
+
 .data-search {
   display: grid;
   grid-template-columns: auto auto auto 50%;
 }
 .data-search p {
   display:block;
+  margin-top: 29px;
+  margin-left: 73px;
+  font-weight: bold;
 }
+
+.data-search p:nth-child(2) {
+  display:block;
+  margin-top: 31px;
+  margin-left: 46px;
+  font-weight: normal;
+}
+
 .data-search ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   list-style:none;
+  margin-top: 32px;
 } 
 
 .data-search_triangle {
   margin-left: auto;
+  padding-top: 40px;
 }
 
 .data-search_triangle a:nth-child(2) {
@@ -603,16 +692,45 @@ body {
 }
 
 .data-search_item {
-  text-decoration: none;
-  color: var(--default-black);
   font-size: 12px;
-  color: var(--default-for-tringle)
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: var(--default-black);
+  opacity: 0.3;
 }
+
+.data-search_item:hover {
+  color: var(--dark-blue);
+}
+
+.data-search_item:active {
+  color: var(--default-black);
+}
+
+/* .data-search_item:visited {
+  color:var(--dark-blue);
+} */
+
+.data-search_item-tr {
+ color: var(--default-for-tringle); 
+ text-decoration: none;
+}
+
+.data-search_item-tr:hover {
+  color:var(--default-black); 
+ }
+
+ data-search_item-tr:active {
+  color:var(--basic-dark); 
+ }
+
 
 .booking{
   display: flex;
-  background: var(--basic-white);
   padding: 30px 0;
+  padding-left: 73px;
+  border: 1px solid var(--default-for-border);
+  background: var(--basic-white);
 }
 
 .boking__details {
@@ -622,6 +740,9 @@ body {
 .booking__title {
   margin: 0;
   font-size: 21px;
+}
+.booking__name {
+  color: var(--default-for-booking__name);
 }
 
 .booking__rating-container {
@@ -649,10 +770,18 @@ body {
 .booking__button-left {
   padding: 3px 16px 3px 17px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
   background-color: var(--basic-dark);
   color: var(--basic-white);
   border: none;
+}
+
+.booking__button-left:hover {
+  background-color: var(--dark-blue);
+}
+
+.booking__button-left:active {
+  background-color: var(--default-active);
 }
 
 .booking__button-right {
@@ -665,7 +794,20 @@ body {
   border: none;
 }
 
+.booking__button-right:hover {
+  background-color: var(--default-right-button-hover);
+}
+
+.booking__button-left:active {
+  background-color: var(--default-right-button-active);
+} 
+
 .booking__rating-button {
   margin: 0;
+  padding: 3px 12px 3px 15px;
+  font-size: 14px;
   white-space: nowrap;
+  background-color: var(--light-grey);
+  color: var(--fefault-for-button);
+  text-transform: uppercase;
 }
