@@ -70,10 +70,6 @@ body {
   height: auto;
 }
 
-.explanation {
-  background: var(--basic-white);
-}
-
 .attraction-with-image-section__text-container {
   background:var(--basic-dark);
   color: var(--basic-white);
@@ -239,6 +235,11 @@ text-align: center;
   height: 509px; 
   }
 
+.explanation {
+  display: grid;
+  background: var(--basic-white);
+  }
+
 .explanation__title {
   padding-top: 43px;
   left: 405px;
@@ -260,11 +261,20 @@ text-align: center;
 .feature-section__feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0;
+  margin: 64px 0 0 0;
   padding: 0;
   text-align: center;
   list-style:none;
 }
+
+.feature-section__feature-title {
+  margin-top: 31px;
+} 
+
+.feature-section__feature-description {
+  margin-top: 25px;
+  margin-bottom: 82px;
+} 
 
 .attraction-second-image-section {
   display: grid;
@@ -397,50 +407,50 @@ background-color: var(--default-brown-hover);
   text-transform: uppercase;
 }
 
+.search-form-section__submit-button-text {
+  margin: 16px 182px 16px 181px;
+}
+
 
 /* footer */
 
-.footer-main{
+.footer {
   background-color: var(--footer-color);
-  display:flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 120px;
 }
 
-.footer-main-button__search {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--default-black);
-}
-.footer-main-button__phone {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  text-decoration: none;
-  color: var(--default-black);
-}
-
-.footer-main__contacts {
-  text-align: center;
-  margin-left: 111px;
-}
-
-.footer-main-social__list {
+.footer__contacts {
   display: flex;
-  justify-content: space-between;
-  width: 141px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__contact-link {
+  display: block;
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--default-black);
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 0;
   list-style:none;
 }
 
-.footer-main-social__item {
+.footer__social-item {
   margin-left: 6px;
 }
 
-
-.footer-main-social__button {
+.footer__social-button {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -449,44 +459,51 @@ background-color: var(--default-brown-hover);
   background-color:var(--basic-dark);
 }
 
-.footer-main-social__button:active {
+.footer__social-button:active {
   background-color: var(--dark-blue);
 }
 
-.footer-main-social__button:hover {
+.footer__social-button:hover {
   background-color: var(--dark-blue);
 }
 
-.footer-main-social__button:hover path {
+.footer__social-button:hover path {
   fill: var(--basic-white);
   opacity: 0.3;
 }
 
-.footer-main-social__button:active path {
+.footer__social-button:active path {
   fill: var(--basic-white);
   opacity: 0.3;
 }
 
-.footer-main-logo {
+.footer__logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 139px;
+  margin-left: 10px;
 }
 
-.footer-main-logo__text {
+.footer__logo-text {
   display: block;
   font-size: 14px;
   line-height: 26px;
 }
 
-.footer-logo:hover path {
+.footer__logo-link {
+  margin-left: 10px;
+}
+
+.footer__logo-link:hover path {
   fill: var(--default-hover);
 }
 
-.footer-logo:active path {
+.footer__logo-link:active path {
   fill: var(--default-logo-active);
 }
+
+
+/* choose-form-section */
 
 .choose-form-section{
   display: grid;
@@ -524,6 +541,10 @@ background-color: var(--default-brown-hover);
 
 .choose-form__checkbox-input:checked + label::after {
   background-image: url("../img/checkbox_on.svg");
+}
+
+.choose-form__checkbox-input:disabled {
+  color: var(--defauit-blocked-checkbox);
 }
 
 .choose-form__check {
@@ -599,7 +620,7 @@ background-color: var(--default-brown-hover);
   position: absolute;
   left: 150px;
   right: 0;
-  top: 0px;
+  top: 5px;
   width: 2px;
   height: 22px;
   background-color:var(--basic-white);
@@ -611,27 +632,29 @@ background-color: var(--default-brown-hover);
 }
 
 .choose-form__min-price {
-  margin-left: 64px;
+  margin: 5px 0 6px 64px;
   color:var(--basic-white);
 }
 .choose-form__max-price {
-  margin-left: 72px;
+  margin: 5px 0 6px 72px;
   color:var(--basic-white);
 }
 
 .choose-form__min-price-input {
+  margin: 5px 0 6px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 47px;
 }
 
 .choose-form__max-price-input{
+  margin: 5px 0 6px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 47px;
 }
 
@@ -658,11 +681,11 @@ background-color: var(--default-brown-hover);
 }
 
 .choose-form__range-controls .toggle-min {
-  left: 18px;
+  left: 0;
 }
 
 .choose-form__range-controls .toggle-max {
-  left: 160px;
+  left: 245px;
 }
 
 .choose-form__button {
@@ -736,7 +759,7 @@ background-color: var(--default-brown-hover);
 }
 
 /* .data-search_item:visited {
-  color:var(--dark-blue);
+  color: var(--dark-blue);
    opacity: 1;
 } */
 
@@ -749,12 +772,16 @@ background-color: var(--default-brown-hover);
   color:var(--default-black); 
  }
 
- data-search_item-tr:active {
+ .data-search_item-tr:active {
   color:var(--basic-dark); 
  }
 
+ /* .data-search_item-tr:visited {
+  color: var(--dark-blue);
+} */
 
-.booking{
+
+.booking {
   display: flex;
   padding: 30px 0;
   padding-left: 73px;
@@ -770,6 +797,21 @@ background-color: var(--default-brown-hover);
   margin: 0;
   font-size: 21px;
 }
+
+.booking__title-link {
+  text-decoration: none;
+  color: var(--default-black);
+}
+
+.booking__title-link:hover {
+color: var(--basic-dark);
+}
+
+.booking__title-link:active {
+  color: var(--default-black);
+  opacity: 0.3;
+  }
+
 .booking__name {
   color: var(--default-for-booking__name);
 }
@@ -792,6 +834,7 @@ background-color: var(--default-brown-hover);
 }
 
 .booking__rating-stars {
+  font-size: 21px;
   margin: 0;
   color: var(--basic-dark);
 }
@@ -827,7 +870,7 @@ background-color: var(--default-brown-hover);
   background-color: var(--default-right-button-hover);
 }
 
-.booking__button-left:active {
+.booking__button-right:active {
   background-color: var(--default-right-button-active);
 } 
 
