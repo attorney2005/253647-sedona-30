@@ -336,6 +336,10 @@ text-align: center;
   text-transform: uppercase;
 }
 
+.map {
+  position: relative;
+}
+
 .search-form-section__open-button:hover {
 background-color: var(--default-brown-hover);
 }
@@ -346,13 +350,14 @@ background-color: var(--default-brown-hover);
 
 .search-form-section__form {
   box-sizing: border-box;
-  padding: 55px;
   position: absolute;
+  margin-left: -284px;
+  padding: 55px;
   width: 568px;
   background-color: var(--basic-white);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  top: 291px;
-  left: calc(50% - 284px);
+  top: 0;
+  left: 50%;
 }
 
 .search-form-section__item {
