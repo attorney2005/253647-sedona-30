@@ -72,7 +72,7 @@
       </section>
 
       <div class="attraction-second-image-section">
-        <img class="attraction-second-image-section__image"  src="img/imagecanyon.jpg" width="800" height="256" alt="Виды каньонов">
+        <img class="attraction-second-image-section__image" src="img/imagecanyon.jpg" width="800" height="256" alt="Виды каньонов">
         <div class="attraction-with-image-section__text-container">
           <p class="attraction-with-image-section__title">там есть<br> мост дьявола</p>
           <p class="attraction-with-image-section__subtitle">— №2 —</p>
@@ -100,39 +100,69 @@
         </ul>
       </section>
 
-      <section class="search-form-section">
-        <div class="search-form-section__header-container">
-          <h2 class="search-form-section__title">заинтересовались?</h2>
-          <p class="search-form-section__subtitle">
-            укажите предполагаемые даты поездки,<br>
-            и мы покажем вам лучшие предложения гостиниц в седоне
-          </p>
-          <button class="search-form-section__open-button" type="button">поиск гостиницы в седоне</button>
+      <section class="search-section">
+        <h2 class="search-section__title">заинтересовались?</h2>
+        <p class="search-section__subtitle">
+          укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в седоне
+        </p>
+        <div class="search-form">
+          <button class="search-form__open-button" type="button">поиск гостиницы в седоне</button>
+          <form class="search-form__form" action="#" method="post">
+            <p class="search-form__input-container">
+              <label class="search-form__label" for="check-in-date">дата заезда:</label>
+              <input class="search-form__input" id="check-in-date" type="text" name="date" value="24 апреля 2017">
+              <a href="#">
+                <svg class="search-form__calendar" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z"
+                    fill="#A9A9A9"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z"
+                    fill="#A9A9A9"/>
+                </svg>
+              </a>
+            </p>
+            <p class="search-form__input-container">
+              <label class="search-form__label" for="check-out-date">дата выезда:</label>
+              <input class="search-form__input" id="check-out-date" type="text" name="date" value="4 июля 2017">
+              <a href="#">
+                <svg class="search-form__calendar" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z"
+                    fill="#A9A9A9"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z"
+                    fill="#A9A9A9"/>
+                </svg>
+              </a>
+            </p>
+
+            <div class="search-form__ages">
+              <label class="search-form__label" for="choose-adult">взрослые:</label>
+              <button class="search-form__age-button" type="button" name="minus-adult">
+                <span class="icon-minus"></span>
+              </button>
+              <input class="search-form__age-input" id="choose-adult" type="text" name="amount-adult" value="2">
+              <button class="search-form__age-button" class="" type="button" name="plus-adult">
+                <span class="icon-plus"></span>
+              </button>
+
+              <label class="search-form__label search-form__label--type_inline" for="choose-child">дети:</label>
+              <button class="search-form__age-button" type="button" name="minus-children">
+                <span class="icon-minus"></span>
+              </button>
+              <input class="search-form__age-input" id="choose-child" type="text" name="amount-child" value="0">
+              <button class="search-form__age-button" type="button" name="plus-children">
+                <span class="icon-plus"></span>
+              </button>
+            </div>
+            <button class="search-form__submit-button" type="submit">
+              <p>найти
+            </button>
+          </form>
         </div>
-      </section>
-      <section class="map">
-        <form class="search-form-section__form" action="#" method="post">
-          <p class="search-form-section__input-container">
-            <label class="search-form-section__label" for="check-in-date">дата заезда:</label>
-            <input class="search-form-section__input" id="check-in-date" type="date" name="calendar" value="24 апреля 2017">
-          </p>
-          <p class="search-form-section__input-container">
-            <label class="search-form-section__label" for="check-out-date">дата выезда:</label>
-            <input class="search-form-section__input" id="check-out-date" type="date" name="calendar" value="4 июля 2017">
-          </p>
-          <div class="search-form-section__ages">
-            <p class="search-form-section__input-container">
-              <label class="search-form-section__label" for="choose-adult">взрослые:</label>
-              <input class="search-form-section__input search-form-section--type-age" id="choose-adult" type="number" name="name-adult" value="0">
-            </p>
-            <p class="search-form-section__input-container">
-              <label class="search-form-section__label" for="choose-child">дети:</label>
-              <input class="search-form-section__input search-form-section--type-age" id="choose-child" type="number" name="number-child" value="0">
-            </p>
-          </div>
-          <button class="search-form-section__submit-button" type="submit"><p class="search-form-section__submit-button-text">найти</p></button>
-        </form>
-        <img class="search-form-section__map" src="img/map.jpg" alt="карта Седоны">
+        <img class="search-form__map" src="img/map.jpg" alt="карта Седоны">
       </section>
     </main>
 
@@ -181,6 +211,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/search-form.js"></script>
 </body>
 
 </html>
