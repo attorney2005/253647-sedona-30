@@ -12,7 +12,19 @@
   --default-black: #000000;
   --default-hover: #81B3D2;
   --default-brown: #766357;
-   --game-boy-color: rgba;
+  --default-dark-grey:  #ababab;
+  --default-for-tringle: #CACACA;
+  --fefault-for-button: #666666;
+  --default-for-booking__name: #333333;
+  --default-for-border: #E5E5E5;
+  --default-active:  #5496BD;
+  --default-right-button-hover: #604E43;
+  --default-right-button-active: #503E33;
+  --default-logo-active: #231F20;
+  --default-brown-hover: #604E43;
+  --default-brown-active:#503E33;
+  --defauit-blocked-checkbox: #6A6A6A;
+  --transparent-black: rgba(0, 0, 0, .3);S
 }
 
 body {
@@ -22,7 +34,9 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-family: var(--default-font-family);
+  text-transform: uppercase;
   background-color: var(--basic-white);
+
 } 
   
 @font-face {
@@ -39,21 +53,32 @@ body {
   font-style: normal;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .img {
   max-width: 100%;
   height: auto;
 }
 
-.explanation {
-  background: var(--basic-white);
-}
-
 .attraction-with-image-section__text-container {
   background:var(--basic-dark);
+  color: var(--basic-white);
 }
 
 .attraction-second-image-section__text-container {
   background: var(--basic-dark);
+  color: var(--basic-white);
 }
 
 .feature-section {
@@ -64,13 +89,6 @@ body {
   background:var(--basic-light-dark);
 }
 
-.search-form-section {
-  background: var(--basic-white);
-}
-
-.data-search {
-  background: var(--basic-white);
-}
 .page-body{
   min-height: 100%;
   background-color: var(--defolt-smoke);
@@ -101,6 +119,7 @@ body {
   height: 70px;
   top: 0px;
   left: calc(50% - 69px);
+  z-index: 1;
 }
 
 .header__nav-menu {
@@ -155,30 +174,63 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+.attraction-with-image-section__title {
+  margin-top: 47px;
+  font-weight: 700;
+  font-size: 21px;
+}
 
+.attraction-with-image-section__subtitle {
+  margin-top: 25px;
+}
+
+.attraction-with-image-section__description {
+  margin-top: 23px;
+}
+
+.attraction-with-image-section__text-container {
+  text-align: center;
+}
+
+.attraction-section__list {
+text-align: center;
+}
 .container {
   display: grid;
-  grid-template-rows: auto 1fr auto 1.5fr auto 1fr auto;
+  grid-template-rows: auto 1fr auto auto auto 1fr auto;
 }
 
 .container__label {
   position: absolute;
-  top: 132px;
+  top: 77px;
   left: calc(50% - 228px);
 }
 
+.container__wings {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .container__image {
+  position: relative;
   background-image: url(../img/backgroundphoto.jpg);
   width: auto; 
   height: 509px; 
   }
 
+.explanation {
+  display: grid;
+  background: var(--basic-white);
+  }
+
 .explanation__title {
+  padding-top: 43px;
   left: 405px;
   top: 606.5px;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 16.5px;
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -187,29 +239,26 @@ body {
 .explanation__description {
   text-align: center;
   margin-bottom: 51px;
+  padding-top: 16px;
 }
  
-/* container */
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.container--type_main-page {
-
-}
-
-.container--type_inside-page {
-  grid-template-rows: auto auto 1fr 1fr 1fr;
-}
-
 .feature-section__feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
+  margin: 64px 0 0 0;
+  padding: 0;
+  text-align: center;
   list-style:none;
 }
+
+.feature-section__feature-title {
+  margin-top: 31px;
+} 
+
+.feature-section__feature-description {
+  margin-top: 25px;
+  margin-bottom: 82px;
+} 
 
 .attraction-second-image-section {
   display: grid;
@@ -220,141 +269,231 @@ body {
 .attraction-section__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 0 54px 0;
   margin: 0 auto;
   list-style:none;
 }
 
+.attraction-section__item-title {
+  margin-top: 47px;
+}
+
+.attraction-section__item-subtitle {
+  margin-top: 25px;
+}
+
+.attraction-section__item-text {
+  margin-top: 23px;
+}
 
 /* search-form-section */
 
-.search-form-section__header-container {
+.search-section {
+  position: relative;
+  padding-top: 58px;
+  background: var(--basic-white);
   text-align: center;
 }
 
 .search-form-section__title {
-  margin: 58px 0 0 0;
+  margin: 0;
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.search-form-section__subtitle {
+.search-section__subtitle {
   margin: 28px 0 0 0;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.search-form-section__open-button {
-  display: block;
+
+.search-form {
+  position: relative;
   margin: 40px auto 0 auto;
-  padding: 30px 24px 30px 25px;
+  width: 568px;
+}
+
+.search-form__open-button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 86px;
+  padding: 30px 24px 38px 25px;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;  
-  width: 568px;
   color: var(--basic-white);
   background-color:var(--default-brown);
   border: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.search-form-section__form {
+.search-form__open-button:hover {
+  background-color: var(--default-brown-hover);
+}
+
+.search-form__open-button:active {
+  background-color: var(--default-brown-active);
+}
+
+.search-form__form {
   box-sizing: border-box;
-  padding: 55px;
   position: absolute;
-  width: 568px;
+  width: 100%;
+  padding: 55px;
   background-color: var(--basic-white);
   box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
-  left: calc(50% - 284px);
+  top: 86px;
+  left: 0;
+  transition: all 0.5s;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.search-form__form--visible {
+  transform: scaleY(1);
 }
 
 .search-form-section__item {
 
 }
 
-.search-form-section__ages {
+.search-form__ages {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .search-form-section__check-out-date {
-
 }
 
-.search-form-section__input {
-  padding: 0 10px;
+.search-form__input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-form__label {
+  display: block;
+  box-sizing: border-box;
+  width: 112px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: var(--default-font-family);
+  color: var(--default-black);
+}
+.search-form__label--type_inline {
+  margin-left: auto;
+  padding-left: 37px;
+}
+
+.search-form__input {
+  display: block;
+  height: 38px;
+  flex-grow: 1;
+  padding: 6px 12px;
   font-family: var(--default-font-family);
   background-color: var(--light-grey);
   border: none;
   text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.search-form__calendar {
+  position: absolute;
+  left: 421px;
+  top: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.search-form__age-button {
+  display: block;
+  box-sizing: border-box;
   height: 38px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 26px;
+  width: 38px;
+  border: none;
+  cursor: pointer;
 }
 
-.search-form-section--type-age {
-
-}
-
-.search-form-section__label {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 26px;
+.search-form__age-input {
+  padding: 0;
+  height: 38px;
+  width: 38px;
+  font-family: var(--default-font-family);
+  background-color: var(--light-grey);
+  border: none;
   text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.search-form__submit-button {
+  display: block;
+  margin-top: 54px;
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+  width: 100%;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .appointment-item input:focus {
   border-color: var(--special);
 }
 
-.search-form-section__submit-button {
-  display: block;
-  color: var(--basic-white);
-  background-color: var(--basic-dark);
-  width: 100%;
-  height: 58px;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  border: none;
-  text-transform: uppercase;
-}
-
-
 /* footer */
 
-.footer-main{
+.footer {
   background-color: var(--footer-color);
-}
-
-.footer-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 1200px;
-}
-.footer-main-button__search {
-  font-size: 21px;
-  line-height: 26px;
+  height: 120px;
 }
 
-.footer-main-button__phone {
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.footer-main-social__list {
+.footer__contacts {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 141px;
-  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__contact-link {
+  display: block;
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--default-black);
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   list-style:none;
 }
 
-.footer-main-social__button {
+.footer__social-item {
+  margin-left: 6px;
+}
+
+.footer__social-button {
   display:flex;
   align-items: center;
   justify-content: center;
@@ -363,47 +502,56 @@ body {
   background-color:var(--basic-dark);
 }
 
-.footer-main-social__button:hover {
+.footer__social-button:active {
   background-color: var(--dark-blue);
 }
 
-.footer-main-social__button:hover path {
+.footer__social-button:hover {
   background-color: var(--dark-blue);
-  }
+}
 
-.footer-main-logo {
+.footer__social-button:hover path {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.footer__social-button:active path {
+  fill: var(--basic-white);
+  opacity: 0.3;
+}
+
+.footer__logo-container {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.footer-main-logo__text {
+.footer__logo-text {
   display: block;
   font-size: 14px;
   line-height: 26px;
 }
 
-.footer-logo:hover path {
+.footer__logo-link {
+  margin-left: 10px;
+}
+
+.footer__logo-link:hover path {
   fill: var(--default-hover);
 }
+
+.footer__logo-link:active path {
+  fill: var(--default-logo-active);
+}
+
+
+/* choose-form-section */
 
 .choose-form-section{
   display: grid;
   grid-template-columns: 1fr 1fr 50%;
   height: 217px;
   background-image: url(../img/background.jpg);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .choose-form__service {
@@ -437,6 +585,10 @@ body {
   background-image: url("../img/checkbox_on.svg");
 }
 
+.choose-form__checkbox-input:disabled {
+  color: var(--defauit-blocked-checkbox);
+}
+
 .choose-form__check {
   margin-top: 24px;
 }
@@ -457,9 +609,12 @@ body {
 
 /* бегунок */
 
-.choose-form-section__field {
-  border: none;
+.choose-form-section__column {
   padding: 27px 73px 32px 73px;
+}
+
+.choose-form-section__fieldset {
+  border: none;
 }
 
 .choose-form__title {
@@ -478,7 +633,8 @@ body {
 }
 
 .choose-form__range-filter {
-
+  padding: 0;
+  border: none;
 }
 
 .choose-form__range-controls {
@@ -495,43 +651,53 @@ body {
 }
 
 .choose-form__price-controls {
+  margin-top: 10px;
+  position: relative;
   border: 2px solid var(--basic-white);
   display: flex;
-  width: 317px;
-  height: 34px;
+}
+
+.choose-form__price-controls::before {
+  content: "";
+  position: absolute;
+  left: 150px;
+  right: 0;
+  top: 5px;
+  width: 2px;
+  height: 22px;
+  background-color:var(--basic-white);
+
 }
 
 .choose-form__price-blocks {
-  width: 158px;
+  display: flex;
 }
 
 .choose-form__min-price {
-  width: 158px;
+  margin: 5px 0 6px 64px;
   color:var(--basic-white);
 }
 .choose-form__max-price {
-  width: 158px;
+  margin: 5px 0 6px 72px;
   color:var(--basic-white);
 }
 
 .choose-form__min-price-input {
-  width: 124px;
-  height: 30px;
-  padding: 0;
+  margin: 5px 0 7px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  width: 47px;
 }
 
 .choose-form__max-price-input{
-  width: 124px;
-  height: 30px;
-  padding: 0;
+  margin: 5px 0 7px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  width: 47px;
 }
 
 .choose-form__range-controls .bar {
@@ -550,18 +716,18 @@ body {
   height: 4px;
   padding: 0;
   border: 8px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--default-dark-grey);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--default-dark-grey);
   cursor: pointer;
 }
 
 .choose-form__range-controls .toggle-min {
-  left: 18px;
+  left: 0;
 }
 
 .choose-form__range-controls .toggle-max {
-  left: 160px;
+  left: 245px;
 }
 
 .choose-form__button {
@@ -577,23 +743,91 @@ body {
   color: var(--basic-white);
 }
 
+.choose-form__button:hover {
+  background-color: var(--basic-white);
+  color: var(--default-black);
+}
+
+
+/* data-search */
+
 .data-search {
-  display: grid;
-  grid-template-columns: auto auto auto 50%;
-}
-.data-search p {
-  display:block;
-}
-.data-search ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  list-style:none;
+  display: flex;
+  align-items: center;
+  height: 86px;
+  padding: 0 73px;
+  background-color: var(--basic-white);
 } 
 
-.booking{
+.data-search__result-count {
+  display: block;
+  width: 135px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.data-search__sort-title {
+  display:block;
+  margin-left: 29px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.data-search__sort-options {
   display: flex;
-  background: var(--basic-white);
+  margin-left: 40px;
+  padding: 0;
+  list-style:none;
+}
+
+.data-search__sort-option:not(:first-child) {
+  margin-left: 30px;
+}
+
+.data-search__option-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--transparent-black);
+  border-bottom: 1px dotted var(--basic-dark);
+}
+
+.data-search__option-link:hover {
+  color: var(--dark-blue);
+}
+
+.data-search__option-link:active {
+  color: var(--default-black);
+}
+
+.data-search__sort-order-buttons {
+  margin-left: auto;
+}
+
+.data-search__sort-order-button {
+  color: var(--default-for-tringle); 
+  text-decoration: none;
+}
+
+.data-search__sort-order-button:hover {
+  color:var(--default-black); 
+}
+
+.data-search__sort-order-button:active {
+  color:var(--basic-dark); 
+}
+
+.data-search__sort-order-button--active {
+  color: var(--dark-blue);
+}
+
+
+.booking {
+  display: flex;
   padding: 30px 0;
+  padding-left: 73px;
+  border: 1px solid var(--default-for-border);
+  background: var(--basic-white);
 }
 
 .boking__details {
@@ -602,18 +836,38 @@ body {
 
 .booking__title {
   margin: 0;
+  font-size: 21px;
+}
+
+.booking__title-link {
+  text-decoration: none;
+  color: var(--default-black);
+}
+
+.booking__title-link:hover {
+color: var(--basic-dark);
+}
+
+.booking__title-link:active {
+  color: var(--default-black);
+  opacity: 0.3;
+  }
+
+.booking__name {
+  color: var(--default-for-booking__name);
 }
 
 .booking__rating-container {
   margin-left: auto;
+  margin-right: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .booking__description {
   margin-left: 29px;
-}
-
-.booking__details-column:not(:first-of-type) {
-  margin-left: 6px;
 }
 
 .booking__rating-container {
@@ -621,12 +875,52 @@ body {
 }
 
 .booking__rating-stars {
+  font-size: 21px;
   margin: 0;
+  color: var(--basic-dark);
 }
 
+.booking__button-left {
+  padding: 3px 16px 3px 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--basic-dark);
+  color: var(--basic-white);
+  border: none;
+}
+
+.booking__button-left:hover {
+  background-color: var(--dark-blue);
+}
+
+.booking__button-left:active {
+  background-color: var(--default-active);
+}
+
+.booking__button-right {
+  margin-left: 6px;
+  padding: 3px 17px 3px 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--default-brown);
+  color: var(--basic-white);
+  border: none;
+}
+
+.booking__button-right:hover {
+  background-color: var(--default-right-button-hover);
+}
+
+.booking__button-right:active {
+  background-color: var(--default-right-button-active);
+} 
+
 .booking__rating-button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  margin: 0;
+  padding: 3px 12px 3px 15px;
+  font-size: 14px;
   white-space: nowrap;
+  background-color: var(--light-grey);
+  color: var(--fefault-for-button);
+  text-transform: uppercase;
 }
