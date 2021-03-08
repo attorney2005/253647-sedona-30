@@ -24,7 +24,8 @@
   --default-brown-hover: #604E43;
   --default-brown-active:#503E33;
   --defauit-blocked-checkbox: #6A6A6A;
-  --transparent-black: rgba(0, 0, 0, .3);S
+  --transparent-black: rgba(0, 0, 0, .3);
+  --grey-hover: #EBEBEB;
 }
 
 body {
@@ -157,13 +158,9 @@ body {
   color: var(--default-hover);
 }
 
-.header__nav-item :focus {
-
-}
-
 .header__nav-item :active {
-
-}
+  color: var(--default-black);
+  }
 
 .header__nav-item :visited {
 
@@ -405,6 +402,18 @@ text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
+  outline: none;
+}
+
+.search-form__input:hover {
+  background-color:var(--grey-hover);
+  outline: none;
+}
+
+.search-form__input:focus {
+  background-color:var(--basic-white);
+  border: 2px solid #E5E5E5;
+  outline: none;
 }
 
 .search-form__calendar {
@@ -413,6 +422,17 @@ text-align: center;
   top: 10px;
   cursor: pointer;
   border: none;
+  outline: none;
+}
+
+.search-form__calendar:hover path {
+  fill: var(--default-black);
+  outline: none;
+}
+
+.search-form__calendar:active path {
+  fill: var(--default-hover);
+  outline: none;
 }
 
 .search-form__age-button {
@@ -422,6 +442,17 @@ text-align: center;
   width: 38px;
   border: none;
   cursor: pointer;
+  outline: none;
+}
+
+.search-form__age-button:hover path {
+  fill: var(--default-black);
+  outline: none;
+}
+
+.search-form__age-button:active path {
+  fill: var(--default-hover);
+  outline: none;
 }
 
 .search-form__age-input {
@@ -436,6 +467,7 @@ text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
+  outline: none;
 }
 
 .search-form__submit-button {
@@ -450,6 +482,17 @@ text-align: center;
   border: none;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
+}
+
+.search-form__submit-button:hover {
+  background-color: var(--dark-blue);
+  outline: none;
+}
+
+.search-form__submit-button:active {
+  background-color: var(--default-active);
+  outline: none;
 }
 
 .appointment-item input:focus {
@@ -609,8 +652,12 @@ text-align: center;
 
 /* бегунок */
 
-.choose-form-section__column {
+.choose-form-section__column-left {
   padding: 27px 73px 32px 73px;
+}
+
+.choose-form-section__column-right {
+  padding: 27px 73px 32px 46px;
 }
 
 .choose-form-section__fieldset {
@@ -674,7 +721,7 @@ text-align: center;
 }
 
 .choose-form__min-price {
-  margin: 5px 0 6px 64px;
+  margin: 5px 0 5px 64px;
   color:var(--basic-white);
 }
 .choose-form__max-price {
@@ -683,7 +730,7 @@ text-align: center;
 }
 
 .choose-form__min-price-input {
-  margin: 5px 0 7px 4px;
+  margin: 5px 0 8px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
@@ -741,6 +788,7 @@ text-align: center;
   background: transparent;
   text-transform: uppercase;
   color: var(--basic-white);
+  outline: none;
 }
 
 .choose-form__button:hover {
@@ -798,6 +846,7 @@ text-align: center;
 
 .data-search__option-link:active {
   color: var(--default-black);
+  border-bottom: none;
 }
 
 .data-search__sort-order-buttons {
@@ -887,6 +936,7 @@ color: var(--basic-dark);
   background-color: var(--basic-dark);
   color: var(--basic-white);
   border: none;
+  outline: none;
 }
 
 .booking__button-left:hover {
@@ -905,6 +955,7 @@ color: var(--basic-dark);
   background-color: var(--default-brown);
   color: var(--basic-white);
   border: none;
+  outline: none;
 }
 
 .booking__button-right:hover {
