@@ -730,7 +730,7 @@ text-align: center;
 }
 
 .choose-form__min-price-input {
-  margin: 5px 0 8px 4px;
+  margin: 5px 0 7px 4px;
   color:var(--basic-white);
   background: transparent;
   border: none;
@@ -749,10 +749,11 @@ text-align: center;
 
 .choose-form__range-controls .bar {
   position: absolute;
-  left: 22px;
-  width: 150px;
+  left: 260px;
+  width: 56px;
   height: 2px;
   background-color: var(--basic-white);
+  opacity: 0.3;
 }
 
 .choose-form__range-controls .toggle {
