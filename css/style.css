@@ -37,7 +37,6 @@ body {
   font-family: var(--default-font-family);
   text-transform: uppercase;
   background-color: var(--basic-white);
-
 } 
   
 @font-face {
@@ -83,10 +82,12 @@ body {
 }
 
 .feature-section {
+  padding-top: 59px;
   background: var(--basic-white);
 }
 
 .attraction-section {
+  padding-top: 22px;
   background:var(--basic-light-dark);
 }
 
@@ -223,7 +224,7 @@ text-align: center;
 
 .container {
   display: grid;
-  grid-template-rows: auto 1fr auto auto auto 1fr auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
 }
 
 .container--type_inside-page {
@@ -265,19 +266,22 @@ text-align: center;
 .explanation__description {
   text-align: center;
   padding-top: 30px;
+  padding-bottom: 44px;
 }
  
 .feature-section__feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 64px 0 0 0;
+  margin: 0;
   padding: 0;
   text-align: center;
-  list-style:none;
+  list-style: none;
 }
 
 .feature-section__feature-title {
-  margin-top: 31px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
 } 
 
 .feature-section__feature-description {
@@ -294,13 +298,16 @@ text-align: center;
 .attraction-section__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 0 54px 0;
+  padding: 22px 0 54px 0;
   margin: 0 auto;
   list-style:none;
 }
 
 .attraction-section__item-title {
-  margin-top: 47px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
 }
 
 .attraction-section__item-subtitle {
@@ -315,11 +322,17 @@ text-align: center;
 
 .search-section {
   position: relative;
-  padding-top: 58px;
+  padding-top: 44px;
   background: var(--basic-white);
   text-align: center;
 }
 
+.search-section__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+}
 .search-form-section__title {
   margin: 0;
   font-size: 30px;
@@ -328,12 +341,11 @@ text-align: center;
 }
 
 .search-section__subtitle {
-  margin: 28px 0 0 0;
+  margin: 34px 0 0 0;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
 }
-
 
 .search-form {
   position: relative;
@@ -347,7 +359,7 @@ text-align: center;
   width: 100%;
   height: 86px;
   padding: 30px 24px 38px 25px;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;  
   color: var(--basic-white);
@@ -413,6 +425,7 @@ text-align: center;
   font-family: var(--default-font-family);
   color: var(--default-black);
 }
+
 .search-form__label--type_inline {
   margin-left: auto;
   padding-left: 37px;
