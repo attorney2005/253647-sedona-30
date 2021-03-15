@@ -21,52 +21,52 @@
                     <img src="img/logo.svg" alt="Логотип Седона»">
                 </a>
                 <ul class="header__nav-menu">
-                    <li class="header__nav-item header__nav-item--left"><a>информация</a></li>
-                    <li class="header__nav-item header__nav-item--left header__nav-item--central"><a href="blank.html">фото и видео</a></li>
-                    <li class="header__nav-item header__nav-item--right header__nav-item--central"><a href="blank.html">карта штата</a></li>
-                    <li class="header__nav-item header__nav-item--right"><a href="blank.html">гостиницы</a></li>
+                    <li class="header__nav-item"><a>информация</a></li>
+                    <li class="header__nav-item"><a href="blank.html">фото и видео</a></li>
+                    <li class="header__nav-item"><a href="blank.html">карта штата</a></li>
+                    <li class="header__nav-item"><a href="blank.html">гостиницы</a></li>
                 </ul>
             </nav>
         </header>
 
         <main class="container container--type_inside-page">
 
-            <form class="choose-form-section">
+            <form class="choose-form">
                 <!---разобраться-->
-                <div class="choose-form-section__column-left">
-                    <fieldset class="choose-form-section__fieldset">
+                <div class="choose-form__column">
+                    <fieldset class="choose-form__fieldset">
                         <legend class="choose-form__title">инфраструктура:</legend>
                         <div class="choose-form__check">
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="pool" id="pool" checked>
-                                <label class="choose-form__service" for="pool"><span class="service">бассейн</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="pool" id="pool" checked>
+                                <label class="choose-form__checkbox-label" for="pool">бассейн</label>
                             </div>
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="parking" id="parking">
-                                <label class="choose-form__service" for="parking"><span class="service">парковка</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="parking" id="parking">
+                                <label class="choose-form__checkbox-label" for="parking">парковка</label>
                             </div>
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="wi-fi" id="wi-fi">
-                                <label class="choose-form__service" for="wi-fi"><span class="service">wi-fi</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="wi-fi" id="wi-fi">
+                                <label class="choose-form__checkbox-label" for="wi-fi">wi-fi</label>
                             </div>
                         </div>
                     </fieldset>
                 </div>
-                <div class="choose-form-section__column-right">
-                    <fieldset class="choose-form-section__fieldset">
+                <div class="choose-form__column">
+                    <fieldset class="choose-form__fieldset">
                         <legend class="choose-form__title">тип жилья:</legend>
                         <div class="choose-form__check">
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="hotel" id="hotel" checked>
-                                <label class="choose-form__service" for="hotel"><span class="service">гостиница</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="hotel" id="hotel" checked>
+                                <label class="choose-form__checkbox-label" for="hotel">гостиница</label>
                             </div>
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="motel" id="motel" checked>
-                                <label class="choose-form__service" for="motel"><span class="service">мотель</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="motel" id="motel" checked>
+                                <label class="choose-form__checkbox-label" for="motel">мотель</label>
                             </div>
                             <div class="choose-form__checkbox">
-                                <input class="visually-hidden choose-form__checkbox-input" type="checkbox" name="apartments" id="apartments" checked>
-                                <label class="choose-form__service" for="apartments"><span class="service">апартаменты</span></label>
+                                <input class="choose-form__checkbox-input visually-hidden" type="checkbox" name="apartments" id="apartments" checked>
+                                <label class="choose-form__checkbox-label" for="apartments">апартаменты</label>
                             </div>
                         </div>
                     </fieldset>
@@ -76,15 +76,14 @@
                 <div class="choose-form__filter-item">
                     <fieldset class="choose-form__range-filter">
                         <legend class="choose-form__title">стоимость в сутки (р):</legend>
-                        <div class="choose-form__price-controls">
-                            <div class="choose-form__price-blocks">
-                                <label class="choose-form__min-price"> от</label>
-                                <input class="choose-form__min-price-input" type="number" name="min-price" value="0">
+                        <div class="choose-form__price-fields">
+                            <div class="choose-form__price-field">
+                                <label class="choose-form__price-label"> от</label>
+                                <input class="choose-form__price-input" type="number" name="min-price" value="0">
                             </div>
-                            <div class="choose-form__price-blocks">
-                                <label class="choose-form__max-price">до</label>
-                                <input class="choose-form__max-price-input" type="number" name="max-price" value="3000">
-
+                            <div class="choose-form__price-field">
+                                <label class="choose-form__price-label">до</label>
+                                <input class="choose-form__price-input" type="number" name="max-price" value="3000">
                             </div>
                         </div>
                         <div class="choose-form__range-controls">
@@ -119,11 +118,11 @@
                     <h3 class="booking__title"><a class="booking__title-link" href=#>amara resort & spa</a></h3>
                     <div class="boking__details">
                         <div class="booking__details-column">
-                            <p class="booking__name">гостиница</p>
+                            <p class="booking__detail">гостиница</p>
                             <button class="booking__button booking__button--left" type="submit">подробнее</button>
                         </div>
                         <div class="booking__details-column">
-                            <p>от 4000 р.</p>
+                            <p class="booking__detail">от 4000 р.</p>
                             <button class="booking__button booking__button--right" type="submit">забронировать</button>
                         </div>
                     </div>
@@ -145,11 +144,11 @@
                     <h3 class="booking__title"><a class="booking__title-link" href=#>desert quail inn</a></h3>
                     <div class="boking__details">
                         <div class="booking__details-column">
-                            <p class="booking__name">мотель</p>
+                            <p class="booking__detail">мотель</p>
                             <button class="booking__button booking__button--left" type="submit">подробнее</button>
                         </div>
                         <div class="booking__details-column">
-                            <p>от 3000 р.</p>
+                            <p class="booking__detail">от 3000 р.</p>
                             <button class="booking__button booking__button--right" type="submit">забронировать</button>
                         </div>
                     </div>
@@ -170,11 +169,11 @@
                     <h3 class="booking__title"><a class="booking__title-link" href=#>villas at poco diablo</a></h3>
                     <div class="boking__details">
                         <div class="booking__details-column">
-                            <p>апартаменты</p>
+                            <p class="booking__detail">апартаменты</p>
                             <button class="booking__button booking__button--left" type="submit">подробнее</button>
                         </div>
                         <div class="booking__details-column">
-                            <p>от 2000 р.</p>
+                            <p class="booking__detail">от 2000 р.</p>
                             <button class="booking__button booking__button--right" type="submit">забронировать</button>
                         </div>
                     </div>
@@ -187,7 +186,7 @@
                     <p class="booking__rating-button">рейтинг: 9.2</p>
                 </div>
             </section>
-
+            
         </main>
 
         <footer class="footer">
