@@ -91,6 +91,7 @@ body {
 }
 
 .header__content-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -715,11 +716,11 @@ body {
 }
 
 .choose-form__checkbox-input:not(:checked) + .choose-form__checkbox-label::after {
-  background-image: url("../img/checkbox_off.svg");
+  background-image: url("../img/checkbox-off.svg");
 }
 
 .choose-form__checkbox-input:checked + .choose-form__checkbox-label::after {
-  background-image: url("../img/checkbox_on.svg");
+  background-image: url("../img/checkbox-on.svg");
 }
 
 .choose-form__checkbox-input:disabled {
@@ -795,6 +796,7 @@ body {
   padding-right: 6px;
   position: relative;
   border: 2px solid var(--basic-white);
+  border-radius: 2px;
 }
 
 .choose-form__price-fields::before {
@@ -975,6 +977,8 @@ body {
 }
 
 
+/* booking  */
+
 .booking {
   display: flex;
   padding: 30px 73px;
@@ -985,6 +989,11 @@ body {
 
 .booking:last-of-type {
   border-bottom: 1px solid var(--default-for-border);
+}
+
+.booking__image {
+  width: 135px; 
+  height: 90px;
 }
 
 .boking__details {
